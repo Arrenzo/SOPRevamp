@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="vp">
+<head>
+  <meta charset="utf-8">
+  <title>GC+ Standard Operating Procedure</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta property="og:title" content="VehicleDelivery.vsdx" />
+
+  <script src="vp/jquery-3.1.1.min.js"></script>
+  <link href="vp/bootstrap-3.3.7.min.css" rel="stylesheet" />
+  <script src="vp/bootstrap-3.3.7.min.js"></script>
+  
+  
+  <script src="vp/mustache-2.3.0.min.js"></script>
+  <script src="vp/marked-1.0.0.min.js"></script>
+  <link href="vp/vp-style-1.4.0.min.css" rel="stylesheet" />
+  <script src="vp/vp-script-1.4.0.min.js"></script>
+  <style>
+	h1,h2 {
+  font-weight:bold;
+}
+.tables {
+	margin-left: 20px;
+  margin-right: 20px;
+}
+#steps {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  table-layout: fixed;
+	width: 1200px;
+	margin-left: 30px;
+}
+#steps td, #steps th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#steps tr:nth-child(even){background-color: #f2f2f2;}
+
+#steps td:hover {background-color: #ddd;}
+
+#steps th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #333333;
+  color: white;
+}
+  </style>
+</head>
+<body>
+
+<div class="tables">
+	<h1 style="color:rgb(0,128,175)">GC+ Standard Operating Procedure (SOP)</h1>
+	<p>The Standard Operating Procedure (SOP) of General Cargo presents the end-to-end process of the terminal operations using the system. The SOPs consist of process flowchart, workflow actions, including variations and optional steps.</p>
+	<p>The following list is the set of SOPs according to different terminal operations:</p>
+	
+	<table id="steps">
+		<caption><h2 style="color:#333333">GC</h2></caption>
+	  <tr>
+		<th style="text-align:center">Breakbulk</th>
+		<th style="text-align:center">Vehicle</th>
+		<th style="text-align:center">Bulk</th>
+		<th style="text-align:center">Equipment</th>
+	  </tr>
+	  <tr>
+		<td><a href="">Breakbulk delivery</a></td>
+		<td><a href="VehicleDelivery.html">Vehicle delivery</a></td>
+		<td><a href="">Bulk Delivery</a></td>
+		<td><a href="">Empty chassis discharge</a></td>
+	  </tr>
+	  <tr>			
+		<td><a href="">Breakbulk direct delivery</a></td>
+		<td><a href="">Vehicle direct delivery</a></td>
+		<td><a href="">Bulk direct delivery</a></td>
+		<td><a href="">Empty chassis loading</a></td>
+	  </tr>
+	  <tr>
+		<td><a href="">Breakbulk delivery by sea</a></td>
+		<td><a href="">Vehicle self-driven delivery</a></td>
+	  </tr>
+	  <tr>
+		<td><a href="">Breakbulk transhipment</a></td>	
+		<td><a href="">Vehicle delivery by sea</a></td>
+	  </tr>
+	  <tr>
+		<td><a href="">Breakbulk loading</a></td>
+		<td><a href="">Vehicle transhipment</a></td>
+	  </tr>
+	  <tr>
+		<td><a href="">Breakbulk direct loading</a></td>
+		<td><a href="">Vehicle loading</a></td>
+	  </tr>
+	  <tr>
+		<td><a href="">Breakbulk back to town</a></td>
+		<td><a href="">Vehicle direct loading</a></td>
+	  </tr>
+	  <tr>
+		<td><a href="">Breakbulk cargo rollover</a></td>
+		<td><a href="">Vehicle back to town</a></td>
+	  </tr>
+	  <tr>
+		<td><a href="">Breakbulk cargo rollback</a></td>
+		<td><a href="">Vehicle cargo rollover</a></td>
+	  </tr>
+	  <tr>
+		<td><a href="">Breakbulk storage</a></td>
+		<td><a href="">Vehicle cargo rollback</a></td>
+	  </tr>
+	  <tr>
+		<td><a href="">Breakbulk delivery from chassis</a></td>
+		<td><a href="">Vehicle storage</a></td>
+	  </tr>
+	  <tr>
+		<td><a href="">Breakbulk loading with chassis</a></td>
+		<td><a href="">Vehicle delivery from chassis</a></td>
+	  </tr>
+	  <tr>
+		<td><a href="">Breakbulk transhipment with chassis</a></td>
+		<td><a href="">Vehicle self-driven delivery from chassis</a></td>
+	  </tr>
+	  <tr>
+		<td><a href="">Breakbulk loading (Rail Discharge)</a></td>
+		<td><a href="">Vehicle loading with chassis</a></td>
+	  </tr>
+	  <tr>
+		<td style="visibility: hidden;border:0px"></td>
+		<td><a href="">Vehicle transhipment with chassis</a></td>
+	  </tr>
+	</table>
+	
+	<table id="steps">
+		<caption><h2 style="color:#333333">CFS</h2></caption>
+	  <tr>
+		<th style="text-align:center">Breakbulk</th>
+		<th style="text-align:center">Vehicle</th>
+		<th style="text-align:center">Bulk</th>
+		<th style="visibility: hidden;border:0px"></th>
+	  </tr>
+	  <tr>
+		<td><a href="">Breakbulk stripping</a></td>
+		<td><a href="">Vehilce stripping</a></td>
+		<td><a href="">Bulk stripping</a></td>
+	  </tr>
+	  <tr>			
+		<td><a href="">Breakbulk partial stripping</a></td>
+	  </tr>
+	  <tr>			
+		<td><a href="">Breakbulk direct stripping</a></td>
+	  </tr>
+	  <tr>			
+		<td><a href="">Breakbulk direct partial stripping</a></td>
+	  </tr>
+	  <tr>			
+		<td><a href="">Breakbulk stuffing</a></td>
+	  </tr>
+	  <tr>			
+		<td><a href="">Breakbulk direct stuffing</a></td>
+	  </tr>
+	</table>
+<br>
+</div>
+</body>
+</html>

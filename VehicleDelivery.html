@@ -1,0 +1,1527 @@
+﻿<!DOCTYPE html>
+<html class="vp">
+<head>
+  <meta charset="utf-8">
+  <title>Vehicle Delivery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta property="og:title" content="VehicleDelivery.vsdx" />
+
+  <script src="vp/jquery-3.1.1.min.js"></script>
+  <link href="vp/bootstrap-3.3.7.min.css" rel="stylesheet" />
+  <script src="vp/bootstrap-3.3.7.min.js"></script>
+  
+  
+  <script src="vp/mustache-2.3.0.min.js"></script>
+  <script src="vp/marked-1.0.0.min.js"></script>
+  <link href="vp/vp-style-1.4.0.min.css" rel="stylesheet" />
+  <script>
+        window.svgpublish = {"shapes":{"shape4":{"ShapeId":"shape4","Props":{"Action":"Vehicle Delivery"},"Text":"","IsContainer":true,"ContainerText":"Vehicle Delivery","ContainerCategories":"","PopoverMarkdown":"<h2>{{Props.Action}}</h2>","MasterName":"CFF Container"},"shape7":{"ShapeId":"shape7","Text":"","IsContainer":true,"ContainerText":"","ContainerCategories":"","MasterName":"Swimlane List"},"shape1":{"ShapeId":"shape1","Props":{"Action":"Vessel Planner"},"Text":"","IsContainer":true,"ContainerText":"Vessel Planner","ContainerCategories":"Swimlane","PopoverMarkdown":"<h2>{{Props.Action}}</h2>\r\n<h3>Privileges</h3>\r\n<ul>\r\n    <li>Viewing and creation of vessels</li>\r\n    <li>Viewing and updating of vessel visits and visit state</li>\r\n    <li>Viewing and updating of vessel services</li>\r\n</ul>","MasterName":"Swimlane (vertical)"},"shape51":{"ShapeId":"shape51","Props":{"Action":"Documentation Officer"},"Text":"","IsContainer":true,"ContainerText":"Documentation Officer","ContainerCategories":"Swimlane","PopoverMarkdown":"<h2>{{Props.Action}}</h2>\r\n<h3>Privileges</h3>\r\n<ul>\r\n    <li>Viewing and updating of vessel visits, particularly on vessel operation timestamp and activities/delays</li>\r\n    <li>Creation and updating of vessel billable events</li>\r\n    <li>Management of inward manifest and documentation</li>\r\n    <li>Management of service request and export documentation</li>\r\n    <li>Viewing and generation of generic reports</li>\r\n    <li>Application and releasing of cargo holds</li>\r\n    <li>Management of business units</li>\r\n</ul>","MasterName":"Swimlane (vertical)"},"shape78":{"ShapeId":"shape78","Props":{"Action":"Hatch Clerk"},"Text":"","IsContainer":true,"ContainerText":"Hatch Clerk","ContainerCategories":"Swimlane","PopoverMarkdown":"<h2>{{Props.Action}}</h2>\r\n<h3>Privileges</h3>\r\n<ul>\r\n    <li>Recording of vessel discharge and loading</li>\r\n    <li>Updating of vessel discharge and loading record</li>\r\n</ul>","MasterName":"Swimlane (vertical)"},"shape103":{"ShapeId":"shape103","Props":{"Action":"Billing Clerk"},"Text":"","IsContainer":true,"ContainerText":"Billing Clerk","ContainerCategories":"Swimlane","PopoverMarkdown":"<h2>{{Props.Action}}</h2>\r\n<h3>Privileges</h3>\r\n<ul>\r\n    <li> </li>\r\n</ul>","MasterName":"Swimlane (vertical)"},"shape115":{"ShapeId":"shape115","Props":{"Action":"Gate Checker"},"Text":"","IsContainer":true,"ContainerText":"Gate Checker","ContainerCategories":"Swimlane","PopoverMarkdown":"<h2>{{Props.Action}}</h2>\r\n<h3>Privileges</h3>\r\n<ul>\r\n    <li>Management of truck arrival and departure</li>\r\n    <li>Updating of truck loading and unloading missions</li>\r\n</ul>","MasterName":"Swimlane (vertical)"},"shape128":{"ShapeId":"shape128","Props":{"Action":"Yard Checker"},"Text":"","IsContainer":true,"ContainerText":"Yard Checker","ContainerCategories":"Swimlane","PopoverMarkdown":"<h2>{{Props.Action}}</h2>\r\n<h3>Privileges</h3>\r\n<ul>\r\n    <li>Viewing of cargo lots inventory records</li>\r\n    <li>Updating of cargo inventory records, including damage notation, vehicle inspection, location update, and admeasurement</li>\r\n    <li>Updating of truck loading and unloading mission</li>\r\n</ul>","MasterName":"Swimlane (vertical)"},"shape141":{"ShapeId":"shape141","Props":{"Action":"Quay Checker"},"Text":"","IsContainer":true,"ContainerText":"Quay Checker","ContainerCategories":"Swimlane","PopoverMarkdown":"<h2>{{Props.Action}}</h2>\r\n<h3>Privileges</h3>\r\n<ul>\r\n    <li>Updating of vessel and crane activities/delays</li>\r\n    <li>Updating of additional vessel services</li>\r\n</ul>","MasterName":"Swimlane (vertical)"},"shape8":{"ShapeId":"shape8","Text":"","IsContainer":true,"ContainerText":"","ContainerCategories":"","MasterName":"Phase List"},"shape9":{"ShapeId":"shape9","Text":"","IsContainer":true,"ContainerText":"Phase","ContainerCategories":"Phase","MasterName":"Separator (vertical)"},"shape44":{"ShapeId":"shape44","Props":{"Action":"Start"},"ConnectedTo":["shape347"],"Layers":[1],"Text":"Start","PopoverMarkdown":"<h3>{{Props.Action}}</h3>","MasterName":"Start/End"},"shape153":{"ShapeId":"shape153","Props":{"Action":"Cargo Management"},"ConnectedTo":["shape768","shape767","shape771"],"ConnectedFrom":["shape760"],"Layers":[1],"Text":"Cargo Management","PopoverMarkdown":"<h3>{{Props.Action}}</h3>","MasterName":"Decision"},"shape157":{"ShapeId":"shape157","Props":{"Action":"Yard Operation"},"ConnectedTo":["shape773","shape776","shape779","shape780","shape778"],"ConnectedFrom":["shape767","shape768","shape771"],"Layers":[1],"Text":"Yard Operation","PopoverMarkdown":"<h3>{{Props.Action}}</h3>","MasterName":"Decision"},"shape180":{"ShapeId":"shape180","Props":{"Action":"Shipping Status"},"ConnectedTo":["shape782","shape783"],"ConnectedFrom":["shape773","shape776","shape778","shape779","shape780"],"Layers":[1],"Text":"Shipping Status","PopoverMarkdown":"<h3>{{Props.Action}}</h3>","MasterName":"Decision"},"shape181":{"ShapeId":"shape181","Props":{"Action":"Invoice Type"},"ConnectedTo":["shape784","shape792"],"ConnectedFrom":["shape783"],"Layers":[1],"Text":"Invoice Type","PopoverMarkdown":"<h3>{{Props.Action}}</h3>","MasterName":"Decision"},"shape198":{"ShapeId":"shape198","Props":{"Action":"Settle seaside billing","Description":"Generate invoice of seaside billing transactions for payment settlement.","Note":null,"Module":"Billing > EBS","UserManual":"System Order","URLUM":null},"ConnectedTo":["shape269"],"ConnectedFrom":["shape766"],"Layers":[1],"Text":"Settle seaside billing","MasterName":"Subprocess"},"shape269":{"ShapeId":"shape269","Props":{"Action":"End"},"ConnectedFrom":["shape797","shape198"],"Layers":[1],"Text":"End","PopoverMarkdown":"<h3>{{Props.Action}}</h3>","MasterName":"Start/End"},"shape270":{"ShapeId":"shape270","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape272":{"ShapeId":"shape272","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape273":{"ShapeId":"shape273","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape274":{"ShapeId":"shape274","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape275":{"ShapeId":"shape275","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape276":{"ShapeId":"shape276","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape277":{"ShapeId":"shape277","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape281":{"ShapeId":"shape281","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape282":{"ShapeId":"shape282","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape283":{"ShapeId":"shape283","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape284":{"ShapeId":"shape284","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape292":{"ShapeId":"shape292","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape294":{"ShapeId":"shape294","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape296":{"ShapeId":"shape296","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape297":{"ShapeId":"shape297","Props":{"Action":"Inventory Update"},"Layers":[2],"Text":"Inventory Update","PopoverMarkdown":"<h3>{{Props.Action}}</h3>","MasterName":"Dynamic connector"},"shape298":{"ShapeId":"shape298","Props":{"Action":"Location Update"},"Layers":[2],"Text":"Location Update","PopoverMarkdown":"<h3>{{Props.Action}}</h3>","MasterName":"Dynamic connector"},"shape299":{"ShapeId":"shape299","Props":{"Action":"Additional Service"},"Layers":[2],"Text":"Additional Service","PopoverMarkdown":"<h3>{{Props.Action}}</h3>","MasterName":"Dynamic connector"},"shape300":{"ShapeId":"shape300","Props":{"Action":"Inspection"},"Layers":[2],"Text":"Inspection","PopoverMarkdown":"<h3>{{Props.Action}}</h3>","MasterName":"Dynamic connector"},"shape301":{"ShapeId":"shape301","Props":{"Action":"Admeasure"},"Layers":[2],"Text":"Admeasure","PopoverMarkdown":"<h3>{{Props.Action}}</h3>","MasterName":"Dynamic connector"},"shape303":{"ShapeId":"shape303","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape305":{"ShapeId":"shape305","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape307":{"ShapeId":"shape307","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape309":{"ShapeId":"shape309","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape311":{"ShapeId":"shape311","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape314":{"ShapeId":"shape314","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape315":{"ShapeId":"shape315","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape316":{"ShapeId":"shape316","Props":{"Action":"Import"},"Layers":[2],"Text":"Import","PopoverMarkdown":"<h3>{{Props.Action}}</h3>","MasterName":"Dynamic connector"},"shape318":{"ShapeId":"shape318","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape319":{"ShapeId":"shape319","Props":{"Action":"Inbound"},"Layers":[2],"Text":"Inbound","PopoverMarkdown":"<h3>{{Props.Action}}</h3>","MasterName":"Dynamic connector"},"shape320":{"ShapeId":"shape320","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape321":{"ShapeId":"shape321","Props":{"Action":"Postpaid"},"Layers":[2],"Text":"Postpaid","PopoverMarkdown":"<h3>{{Props.Action}}</h3>","MasterName":"Dynamic connector"},"shape322":{"ShapeId":"shape322","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape323":{"ShapeId":"shape323","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape324":{"ShapeId":"shape324","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape326":{"ShapeId":"shape326","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape328":{"ShapeId":"shape328","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape330":{"ShapeId":"shape330","Props":{"Action":"Prepaid"},"Layers":[2],"Text":"Prepaid","PopoverMarkdown":"<h3>{{Props.Action}}</h3>","MasterName":"Dynamic connector"},"shape331":{"ShapeId":"shape331","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape333":{"ShapeId":"shape333","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape334":{"ShapeId":"shape334","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape336":{"ShapeId":"shape336","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape338":{"ShapeId":"shape338","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape341":{"ShapeId":"shape341","Props":{"Action":"Postpaid SSR"},"Layers":[2],"Text":"Postpaid SSR","PopoverMarkdown":"<h3>{{Props.Action}}</h3>","MasterName":"Dynamic connector"},"shape343":{"ShapeId":"shape343","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape344":{"ShapeId":"shape344","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape346":{"ShapeId":"shape346","Props":{"Action":"Create vessel visit","Description":"A vessel visit specifies the actual designatd route of a vessel and its actual visit schedule to the terminal.","Note":null,"Module":"Visit Schedule > Vessel Visit","UserManual":"Create a vessel visit","Variation1":null,"Variation2":null,"Variation3":null,"Optional1":"Create vessel service","Optional2":"Update visit operation mode","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Vessel Planner"},"ConnectedTo":["shape348"],"ConnectedFrom":["shape347"],"Layers":[1],"Text":"Create vessel visit","MasterName":"Process"},"shape347":{"ShapeId":"shape347","Props":{"Action":"Create vessel","Description":"A vessel serves as the profile of the physical vessel that contains information about its dimensions, storage locations, and maritime identifications.","Note":null,"Module":"Visit Schedule > Vessel","UserManual":"Create a vessel","Variation1":null,"Variation2":null,"Variation3":null,"Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Vessel Planner"},"ConnectedTo":["shape346"],"ConnectedFrom":["shape44"],"Layers":[1],"Text":"Create vessel","MasterName":"Process"},"shape348":{"ShapeId":"shape348","Props":{"Action":"Submit manifest","Description":"Submit a manifest to declare the list of onboard cargoes from an arriving vessel to its corresponding vessel visit.","Note":"Manifest Template: Import - All Types (XLSX) or General Cargo - Import (XLSX)","Module":"Manifest and Documents > Manifest","UserManual":"Submit a manifest","Variation1":"Submit manifest (vessel visit)","Variation2":null,"Variation3":null,"Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Documentation Officer"},"ConnectedTo":["shape755"],"ConnectedFrom":["shape346"],"Layers":[1],"Text":"Submit manifest","MasterName":"Process"},"shape755":{"ShapeId":"shape755","Props":{"Action":"Import discharge order from manifest","Description":"A discharge order is a planned list of cargoes that are to be discharged from a vessel.","Note":"","Module":"Visit Schedule > Vessel Visit","UserManual":"Import discharge order","Variation1":"Create a discharge order","Variation2":null,"Variation3":null,"Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Vessel Planner"},"ConnectedTo":["shape756"],"ConnectedFrom":["shape348"],"Layers":[1],"Text":"Import discharge order from manfiest","MasterName":"Process"},"shape756":{"ShapeId":"shape756","Props":{"Action":"Assign vessel location of dischage order","Description":"The assigned location appears in Cargo Mobile to assist in tracking the vessel location of cargo during discharging operations.","Note":"Vessel locations are specified in the vessel profile.","Module":"Visit Schedule > Vessel Visit","UserManual":"Assign vessel location","Variation1":"","Variation2":null,"Variation3":null,"Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Vessel Planner"},"ConnectedTo":["shape757"],"ConnectedFrom":["shape755"],"Layers":[1],"Text":"Assign vessel location of discharge order","MasterName":"Process"},"shape757":{"ShapeId":"shape757","Props":{"Action":"Assign yard location of dischage order","Description":"The assigned yard location appears in the Cargo Mobile app to assist in tracking the yard location of a cargo during discharging operations.","Note":"","Module":"Visit Schedule > Vessel Visit","UserManual":"Assign yard location","Variation1":"","Variation2":null,"Variation3":null,"Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Vessel Planner"},"ConnectedTo":["shape758"],"ConnectedFrom":["shape756"],"Layers":[1],"Text":"Assign yard location of discharge order","MasterName":"Process"},"shape758":{"ShapeId":"shape758","Props":{"Action":"Update vessel visit state to OK to Discharge","Description":"Once the vessel arrives to the terminal and is ready for discharging operations, change the visit state to OK to Discharge.","Note":"","Module":"Visit Schedule > Vessel Visit","UserManual":"Update the visit state of a vessel visit","Variation1":"","Variation2":null,"Variation3":null,"Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Vessel Planner"},"ConnectedTo":["shape760"],"ConnectedFrom":["shape757"],"Layers":[1],"Text":"Update vessel visit state to OK to Discharge","MasterName":"Process"},"shape760":{"ShapeId":"shape760","Props":{"Action":"Record vessel discharge - RORO [Mobile]","Description":"Record the discharge operation of a vessel in its corresponding vessel visit.","Note":"","Module":"Cargo Mobile > Vessel","UserManual":"Record vessel discharge","Variation1":"Record offline vessel discharge - RORO [Mobile]","Variation2":"","Variation3":"","Optional1":"Record vessel discharge - RORO (damaged) [Mobile]","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Hatch Clerk"},"ConnectedTo":["shape153","shape762"],"ConnectedFrom":["shape758"],"Layers":[1],"Text":"Record vessel discharge - RORO [Mobile]","MasterName":"Process"},"shape761":{"ShapeId":"shape761","Layers":[2],"Text":"","MasterName":"Dynamic connector"},"shape762":{"ShapeId":"shape762","Props":{"Action":"Record vessel/crane activities [Mobile]","Description":"Capture and manage real-time vessel activities that affect vessel operations and billing services.","Note":"","Module":"Cargo Mobile > Vessel","UserManual":"Manage vessel activities","Variation1":"Record vessel/crane activities","Variation2":"","Variation3":"","Optional1":"Record vessel operation timestamps","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Quay Checker"},"ConnectedTo":["shape763"],"ConnectedFrom":["shape760"],"Layers":[1],"Text":"Record vessel/crane activities [Mobile]","MasterName":"Process"},"shape763":{"ShapeId":"shape763","Props":{"Action":"Record vessel bilable services","Description":"Create and manage additional services performed for a vessel visit.","Note":"","Module":"Visit Schedule > Vessel Visit","UserManual":"Manage vessel operation data","Variation1":"","Variation2":null,"Variation3":null,"Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Documentation Officer"},"ConnectedTo":["shape764"],"ConnectedFrom":["shape762"],"Layers":[1],"Text":"Record vessel billable services","MasterName":"Process"},"shape764":{"ShapeId":"shape764","Props":{"Action":"Update vessel visit state to Operation Completed or Departed","Description":"Once all the operations for the vessel visit are completed, change the visit state to Operation Completed or once the vessel departs the terminal, change the visit state to Departed.","Note":"","Module":"Visit Schedule > Vessel Visit","UserManual":"Update the visit sate of a vessel visit","Variation1":"","Variation2":null,"Variation3":null,"Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Vessel Planner"},"ConnectedTo":["shape765"],"ConnectedFrom":["shape763"],"Layers":[1],"Text":"Update vessel visit state to Operation Completed or Departed","MasterName":"Process"},"shape765":{"ShapeId":"shape765","Props":{"Action":"Confirm operation in vessel visit","Description":"Once the operation data is retrieved for the vessel visit, confirm the operation data to finalize it.","Note":"","Module":"Visit Schedule > Vessel Visit","UserManual":"Confirm operation data","Variation1":"","Variation2":null,"Variation3":null,"Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Vessel Planner"},"ConnectedTo":["shape766"],"ConnectedFrom":["shape764"],"Layers":[1],"Text":"Confirm operation in vessel visit","MasterName":"Process"},"shape766":{"ShapeId":"shape766","Props":{"Action":"Generate TDR","Description":"A Terminal Departure Report (TDR) is a report containing the summary of operations, productivity, and billable services provided to the vessel.","Note":"","Module":"Visit Schedule > Vessel Visit","UserManual":"Generate terminal departure report","Variation1":"","Variation2":null,"Variation3":null,"Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Vessel Planner"},"ConnectedTo":["shape198"],"ConnectedFrom":["shape765"],"Layers":[1],"Text":"Generate TDR","MasterName":"Process"},"shape767":{"ShapeId":"shape767","Props":{"Action":"View cargo inventory","Description":"View cargo lots currently in the inventory according to their location in the terminal yard.","Note":"","Module":"GC/CFS > Cargo Inventory","UserManual":"Cargo inventory monitoring","Variation1":"","Variation2":null,"Variation3":null,"Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Documentation Officer"},"ConnectedTo":["shape157"],"ConnectedFrom":["shape153"],"Layers":[1],"Text":"View cargo inventory","MasterName":"Process"},"shape768":{"ShapeId":"shape768","Props":{"Action":"View cargo lot","Description":"View and manage cargo lots, such as applying and removing of holds.","Note":"","Module":"GC/CFS > Cargo Lot","UserManual":"Cargo lot monitoring","Variation1":"","Variation2":null,"Variation3":null,"Optional1":"Apply cargo lot hold","Optional2":"Release cargo lot hold","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Documentation Officer"},"ConnectedTo":["shape157"],"ConnectedFrom":["shape153"],"Layers":[1],"Text":"View cargo lot","MasterName":"Process"},"shape771":{"ShapeId":"shape771","Props":{"Action":"View cargo tracking","Description":"View each cargo lots and their movement in the terminal.","Note":"","Module":"GC/CFS > Cargo Tracking","UserManual":"Cargo tracking","Variation1":"","Variation2":null,"Variation3":null,"Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Documentation Officer"},"ConnectedTo":["shape157"],"ConnectedFrom":["shape153"],"Layers":[1],"Text":"View cargo tracking","MasterName":"Process"},"shape773":{"ShapeId":"shape773","Props":{"Action":"Update inventory - RORO [Mobile]","Description":"Update the cargo details of RORO cargo currently in the inventory.","Note":"","Module":"Cargo Mobile > Yard","UserManual":"Update RORO cargoes in the inventory","Variation1":"","Variation2":"","Variation3":"","Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Yard Checker"},"ConnectedTo":["shape180"],"ConnectedFrom":["shape157"],"Layers":[1],"Text":"Update inventory - RORO [Mobile]","MasterName":"Process"},"shape776":{"ShapeId":"shape776","Props":{"Action":"Update location - RORO [Mobile]","Description":"Update the storage location of RORO cargo currently in the yard.","Note":"","Module":"Cargo Mobile > Yard","UserManual":"Update RORO location","Variation1":"","Variation2":"","Variation3":"","Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Yard Checker"},"ConnectedTo":["shape180"],"ConnectedFrom":["shape157"],"Layers":[1],"Text":"Update location - RORO [Mobile]","MasterName":"Process"},"shape778":{"ShapeId":"shape778","Props":{"Action":"Admeasure - RORO [Mobile]","Description":"Record the measurement of a RORO cargo in order to document the actual cargo admeasurement volume.","Note":"","Module":"Cargo Mobile > Yard","UserManual":"Record RORO cargo admeasurement","Variation1":"","Variation2":"","Variation3":"","Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Yard Checker"},"ConnectedTo":["shape180"],"ConnectedFrom":["shape157"],"Layers":[1],"Text":"Admeasure - RORO [Mobile]","MasterName":"Process"},"shape779":{"ShapeId":"shape779","Props":{"Action":"Record cargo additional services - RORO [Mobile]","Description":"","Note":"","Module":"Cargo Mobile > Yard","UserManual":"","Variation1":"","Variation2":"","Variation3":"","Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Yard Checker"},"ConnectedTo":["shape180"],"ConnectedFrom":["shape157"],"Layers":[1],"Text":"Record cargo additional services - RORO","MasterName":"Process"},"shape780":{"ShapeId":"shape780","Props":{"Action":"Inspect - RORO [Mobile]","Description":"Record vehicle inspection in order to document the checking of damages, discrepancy, vehicle details, and the availability of interior and exterior parts, and accessories.","Note":"","Module":"Cargo Mobile > Yard","UserManual":"Record a vehicle inspection","Variation1":"","Variation2":"","Variation3":"","Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Yard Checker"},"ConnectedTo":["shape180"],"ConnectedFrom":["shape157"],"Layers":[1],"Text":"Inspect - RORO [Mobile]","MasterName":"Process"},"shape782":{"ShapeId":"shape782","Props":{"Action":"Release B/L","Description":"Update the customs release status of the B/L from Not Released to Full Released.","Note":"Applies only to B/L records that belong to international vessel visits.","Module":"Manifest and Documents > B/L","UserManual":"Release a bill of lading","Variation1":"","Variation2":null,"Variation3":null,"Optional1":"Assign B/L - RORO","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Documentation Officer"},"ConnectedTo":["shape783"],"ConnectedFrom":["shape180"],"Layers":[1],"Text":"Release B/L","MasterName":"Process"},"shape783":{"ShapeId":"shape783","Props":{"Action":"Create cargo delivery request","Description":"Create a cargo delivery request to manage international or domestic delivery transactions.","Note":"","Module":"GC/CFS > Request","UserManual":"Create a cargo delivery request","Variation1":"","Variation2":null,"Variation3":null,"Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Documentation Officer"},"ConnectedTo":["shape181"],"ConnectedFrom":["shape782","shape180"],"Layers":[1],"Text":"Create cargo delivery request","MasterName":"Process"},"shape784":{"ShapeId":"shape784","Props":{"Action":"Dispatch service request","Description":"Dispatch a service request when it is ready to start with the required terminal operation.","Note":"Applies only to service requests with postpaid invoice option.","Module":"GC/CFS > Request","UserManual":"Dispatch a service request","Variation1":"","Variation2":null,"Variation3":null,"Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Documentation Officer"},"ConnectedTo":["shape791"],"ConnectedFrom":["shape181"],"Layers":[1],"Text":"Dispatch service request","MasterName":"Process"},"shape791":{"ShapeId":"shape791","Props":{"Action":"Create truck visit","Description":"","Note":"Applies only if terminal supports truck visit mode.","Module":"GC/CFS > Truck Visit","UserManual":"","Variation1":"Create gate pass","Variation2":null,"Variation3":null,"Optional1":"Print truck visit slip","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Documentation Officer"},"ConnectedTo":["shape793"],"ConnectedFrom":["shape784","shape792"],"Layers":[1],"Text":"Create truck visit","MasterName":"Process"},"shape792":{"ShapeId":"shape792","Props":{"Action":"Settle landside billing","Description":"Generate invoice of landside billing transactions for payment settlement.","Note":null,"Module":"Billing > EBS","UserManual":"OnSpot Clearance","URLUM":null,"":"Billing Clerk","Variation1":"System Order"},"ConnectedTo":["shape791"],"ConnectedFrom":["shape181","shape797"],"Layers":[1],"Text":"Settle landside billing","MasterName":"Subprocess"},"shape793":{"ShapeId":"shape793","Props":{"Action":"Confirm truck arrival [Mobile]","Description":"Confirm and record the arrival date and time of incoming truck or driver.","Note":"","Module":"Cargo Mobile > Gate","UserManual":"Confirm a truck arrival","Variation1":"","Variation2":"","Variation3":"","Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Gate Checker"},"ConnectedTo":["shape795"],"ConnectedFrom":["shape791"],"Layers":[1],"Text":"Confirm truck arrival [Mobile]","MasterName":"Process"},"shape795":{"ShapeId":"shape795","Props":{"Action":"Record truck loading - RORO [Mobile]","Description":"Record the loaded quantity of the cargo from a location in the yard inventory to the truck.","Note":"","Module":"Cargo Mobile > Gate","UserManual":"Record a truck loading","Variation1":"","Variation2":"","Variation3":"","Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Yard Checker"},"ConnectedTo":["shape796"],"ConnectedFrom":["shape793"],"Layers":[1],"Text":"Record truck loading - RORO [Mobile]","MasterName":"Process"},"shape796":{"ShapeId":"shape796","Props":{"Action":"Complete mission [Mobile]","Description":"Complete the mission to finish the loading or unloading operations for a truck mission.","Note":"","Module":"Cargo Mobile > Gate","UserManual":"Complete a truck mission","Variation1":"","Variation2":"","Variation3":"","Optional1":"Print CIR","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Yard Checker"},"ConnectedTo":["shape797"],"ConnectedFrom":["shape795"],"Layers":[1],"Text":"Complete mission [Mobile]","MasterName":"Process"},"shape797":{"ShapeId":"shape797","Props":{"Action":"Confirm truck departure [Mobile]","Description":"Confirm and record the departure date and time of outgoing truck or driver.","Note":"","Module":"Cargo Mobile > Gate","UserManual":"Confirm a truck departure","Variation1":"","Variation2":"","Variation3":"","Optional1":"","Optional2":"","Optional3":null,"URLUM":null,"URLV1":null,"URLV2":null,"URLV3":null,"URLO1":null,"URLO2":null,"URLO3":null,"":"Gate Checker"},"ConnectedTo":["shape269","shape792"],"ConnectedFrom":["shape796"],"Layers":[1],"Text":"Confirm truck arrival [Mobile]","MasterName":"Process"}},"pages":[{"Name":"Page-1","Id":0,"FileName":"VehicleDelivery.html"}],"currentPage":{"Name":"Page-1","Id":0,"FileName":"VehicleDelivery.html"},"layers":[{"Name":"Flowchart","Index":1,"Visible":true},{"Name":"Connector","Index":2,"Visible":true},{"Name":"Callout","Index":3,"Visible":true}],"enableProps":true,"twoFingersTouch":false,"enableAutoFrameHeight":false,"enableLinks":true,"enablePages":true,"enablePageLookup":false,"enablePageSort":false,"enableZoomCtrl":true,"enableZoomShift":false,"enableSearch":false,"enableMultiPageSearch":false,"enableSidebar":false,"enableTooltips":false,"enableSelection":true,"enableHover":true,"enableLayers":false,"enableFollowHyperlinks":true,"openHyperlinksInNewWindow":true,"transformVisioFileLinks":false,"useReadablePageNames":true,"keepRelativeLinks":true,"rightSidebar":false,"alwaysHideSidebar":false,"showSidebarOnSelection":false,"enableSidbarTitle":false,"enableSidebarMarkdown":false,"enableTooltipMarkdown":false,"enableD3":false,"skipMinification":false,"enableBootstrapSwitch":false,"enableBootstrapSelect":false,"tooltipPlacement":"","popoverPlacement":"right auto","enablePopovers":true,"enablePopoverMarkdown":true,"popoverMarkdown":"<h2>{{Props.Action}}</h2>\r\n<h3>Description</h3>\r\n<p>{{Props.Description}}</p>\r\n<p><i>{{Props.Note}}</i></p>\r\n<hr>\r\n<h3>Module</h3>\r\n<p>{{Props.Module}}</p>\r\n<hr>\r\n<h3>User Manual</h3>\r\n\r\n[{{Props.UserManual}}]({{Props.URLUM}})\r\n\r\n<hr>\r\n<h3>Variation</h3>\r\n\r\n[{{Props.Variation1}}]({{Props.URLV1}})\r\n\r\n[{{Props.Variation2}}]({{Props.URLV2}})\r\n\r\n[{{Props.Variation3}}]({{Props.URLV3}})\r\n\r\n<hr>\r\n<h3>Optional</h3>\r\n\r\n[{{Props.Optional1}}]({{Props.URLO1}})\r\n\r\n[{{Props.Optional2}}]({{Props.URLO2}})\r\n\r\n[{{Props.Optional3}}]({{Props.URLO3}})","enableContentMarkdown":false,"tooltipTrigger":"","tooltipOutsideClick":false,"tooltipUseMousePosition":false,"tooltipKeepOnHover":false,"tooltipTimeout":false,"tooltipTimeoutShow":"","sidebarDefaultWidth":"","tooltipTimeoutHide":"","popoverTrigger":"","popoverTimeout":false,"popoverOutsideClick":true,"popoverKeepOnHover":false,"popoverTimeoutShow":"","popoverTimeoutHide":"","popoverUseMousePosition":false,"enableContainerTip":false,"enablePropertySearch":false,"enablePropertySearchFilter":false,"processNested":false,"processBackground":false,"viewBox":"0 0 1358 879.345","layerView":{"enableLayerLookup":false,"enableLayerSort":false,"enableLayerToggles":false,"enableLayerShowAll":false},"selectionView":{"enableBoxSelection":false,"enableBlur":false,"blur":2,"enableDilate":true,"dilate":4,"mode":"normal","selectColor":"rgba(255, 255, 0, 0.90)","hoverColor":"rgba(255, 255, 0, 0.30)","hyperlinkColor":"rgba(0, 0, 255, 0.30)"}}
+        $(document).ready(function () { $("div.svg").panzoom({ svg: $("div.svg > svg").get(0), viewBox: "0 0 1358 879.345" }).removeClass("appear"); });
+  </script>
+  <script src="vp/vp-script-1.4.0.min.js"></script>
+  <style>
+  .popover {
+  max-width: 40%;
+}
+h2 {
+  color:rgb(0,128,175);
+  font-weight:bold;
+}
+h3 {
+  font-weight:bold;
+}
+.tables {
+	margin-left: 20px;
+  margin-right: 20px;
+}
+#steps {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+#steps td, #steps th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#steps tr:nth-child(even){background-color: #f2f2f2;}
+
+#steps tr:hover {background-color: #ddd;}
+
+#steps th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #333333;
+  color: white;
+}
+  </style>
+</head>
+<body>
+  
+  <div id="body-html"></div>
+  <div id="svg" class="svg appear">
+    <svg width="100%" height="100%" xml:space="preserve" color-interpolation-filters="sRGB" class="st27" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+	
+
+	<style type="text/css">
+	.st1 {visibility:visible;}
+	.st2 {fill:#5b9bd5;fill-opacity:0.25;filter:url(#filter_2);stroke:#5b9bd5;stroke-opacity:0.25;}
+	.st3 {fill:#f2f2f2;stroke:#40709c;stroke-width:0.75;}
+	.st4 {fill:#4f88bb;stroke:#40709c;stroke-width:0.75;}
+	.st5 {fill:#feffff;font-family:Calibri;font-size:1.33333em;}
+	.st6 {fill:#5b9bd5;fill-opacity:0.25;filter:url(#filter_2);}
+	.st7 {stroke:#5b9bd5;stroke-opacity:0.25;stroke-width:0.75;visibility:hidden;}
+	.st8 {fill:#4f87bb;fill-opacity:0;}
+	.st9 {stroke:#40709c;stroke-width:0.75;visibility:hidden;}
+	.st10 {fill:#feffff;font-family:Calibri;font-size:1.00001em;}
+	.st11 {fill:#5b9bd5;fill-opacity:0.25;filter:url(#filter_2);stroke:#5b9bd5;stroke-opacity:0.25;visibility:hidden;}
+	.st12 {fill:#4f87bb;stroke:#40709c;stroke-width:0.75;visibility:hidden;}
+	.st13 {fill:#4f87bb;stroke:#41719c;stroke-width:0.75;}
+	.st14 {fill:#feffff;font-family:Calibri;font-size:0.666664em;}
+	.st15 {font-size:1em;}
+	.st16 {fill:url(#grad0-157);}
+	.st17 {stroke:#4f88bb;stroke-width:0.75;}
+	.st18 {fill:#4f88bb;font-family:Calibri;font-size:0.666664em;}
+	.st19 {marker-end:url(#mrkr4-174);stroke:#5b9bd5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1;}
+	.st20 {fill:#5b9bd5;fill-opacity:1;stroke:#5b9bd5;stroke-opacity:1;stroke-width:0.28409090909091;}
+	.st21 {fill:#ffffff;stroke:none;stroke-linecap:butt;stroke-width:7.2;}
+	.st22 {fill:#4f87bb;font-family:Calibri;font-size:0.666664em;}
+	.st23 {marker-end:url(#mrkr4-174);stroke:#5b9bd5;stroke-dasharray:7,5;stroke-linecap:round;stroke-linejoin:round;stroke-width:1;}
+	.st24 {fill:#5b9bd5;fill-opacity:0.22;filter:url(#filter_2);stroke:#5b9bd5;stroke-opacity:0.22;}
+	.st25 {fill:#5b9bd5;stroke:#c8c8c8;stroke-width:0.25;}
+	.st26 {fill:#ed7d31;stroke:#c8c8c8;stroke-width:0.25;}
+	.st27 {fill:none;fill-rule:evenodd;font-size:12px;overflow:hidden;stroke-linecap:square;stroke-miterlimit:3;}
+</style>
+
+	<defs id="Patterns_And_Gradients">
+		<linearGradient id="grad0-157" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(60 0.5 0.5)">
+			<stop offset="0" stop-color="#e9eff7" stop-opacity="1" />
+			<stop offset="0.24" stop-color="#f4f7fb" stop-opacity="1" />
+			<stop offset="0.54" stop-color="#feffff" stop-opacity="1" />
+		</linearGradient>
+	</defs>
+	<defs id="Markers">
+		<g id="lend4">
+			<path d="M 2 1 L 0 0 L 2 -1 L 2 1 " style="stroke:none" />
+		</g>
+		<marker style="overflow:visible" id="mrkr4-174" class="st20" refX="-7.04" orient="auto" markerUnits="strokeWidth" overflow="visible">
+			<use xlink:href="#lend4" transform="scale(-3.52,-3.52) " />
+		</marker>
+	</defs>
+	<defs id="Filters">
+		<filter id="filter_2">
+			<feGaussianBlur stdDeviation="2" />
+		</filter>
+	</defs>
+	<g id="viewport">
+		
+		
+		
+		
+		
+		
+		<g id="shape4" transform="translate(21.9998,-23.7228)" class="cff-container">
+			
+			
+			
+			<g id="shape5-2">
+				
+				
+				<g id="shadow5-3" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<rect x="0" y="43.125" width="1314.28" height="836.22" class="st2" />
+				</g>
+				<rect x="0" y="43.125" width="1314.28" height="836.22" class="st3" />
+			</g>
+			<g id="shape6-7" transform="translate(0,-807.874)">
+				
+				<desc>Vehicle Delivery</desc>
+				
+				
+				
+				<g id="shadow6-8" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<path d="M0 879.35 L1314.28 879.35 L1314.28 851 L0 851 L0 879.35 Z" class="st2" />
+				</g>
+				<path d="M0 879.35 L1314.28 879.35 L1314.28 851 L0 851 L0 879.35 Z" class="st4" />
+				<text x="4" y="869.97" class="st5">Vehicle Delivery</text>			</g>
+		</g>
+		<g id="shape7" transform="translate(21.9998,-23.7228)" class="swimlane-list">
+			
+			
+			<g id="shadow7-14" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="71.4714" width="1314.28" height="807.874" class="st6" />
+				<rect x="0" y="71.4714" width="1314.28" height="807.874" class="st7" />
+			</g>
+			<rect x="0" y="71.4714" width="1314.28" height="807.874" class="st8" />
+			<rect x="0" y="71.4714" width="1314.28" height="807.874" class="st9" />
+		</g>
+		<g id="shape1" transform="translate(21.9998,-23.7228)" class="swimlane-(vertical)">
+			
+			
+			
+			<g id="shape2-21">
+				
+				
+				<g id="shadow2-22" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<rect x="0" y="71.4714" width="194.598" height="807.874" class="st2" />
+				</g>
+				<rect x="0" y="71.4714" width="194.598" height="807.874" class="st3" />
+			</g>
+			<g id="shape3-26" transform="translate(0,-779.528)">
+				
+				<desc>Vessel Planner</desc>
+				
+				
+				
+				<g id="shadow3-27" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<path d="M0 879.35 L194.6 879.35 L194.6 851 L0 851 L0 879.35 Z" class="st2" />
+				</g>
+				<path d="M0 879.35 L194.6 879.35 L194.6 851 L0 851 L0 879.35 Z" class="st4" />
+				<text x="61.76" y="868.77" class="st10">Vessel Planner</text>			</g>
+		</g>
+		<g id="shape51" transform="translate(216.598,-23.7228)" class="swimlane-(vertical)">
+			
+			
+			
+			<g id="shape52-33">
+				
+				
+				<g id="shadow52-34" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<rect x="0" y="71.4714" width="218.268" height="807.874" class="st2" />
+				</g>
+				<rect x="0" y="71.4714" width="218.268" height="807.874" class="st3" />
+			</g>
+			<g id="shape53-38" transform="translate(0,-779.528)">
+				
+				<desc>Documentation Officer</desc>
+				
+				
+				
+				<g id="shadow53-39" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<path d="M0 879.35 L218.27 879.35 L218.27 851 L0 851 L0 879.35 Z" class="st2" />
+				</g>
+				<path d="M0 879.35 L218.27 879.35 L218.27 851 L0 851 L0 879.35 Z" class="st4" />
+				<text x="53.09" y="868.77" class="st10">Documentation Officer</text>			</g>
+		</g>
+		<g id="shape78" transform="translate(604.383,-23.7228)" class="swimlane-(vertical)">
+			
+			
+			
+			<g id="shape79-45">
+				
+				
+				<g id="shadow79-46" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<rect x="0" y="71.4714" width="162.712" height="807.874" class="st2" />
+				</g>
+				<rect x="0" y="71.4714" width="162.712" height="807.874" class="st3" />
+			</g>
+			<g id="shape80-50" transform="translate(0,-779.528)">
+				
+				<desc>Hatch Clerk</desc>
+				
+				
+				
+				<g id="shadow80-51" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<path d="M0 879.35 L162.71 879.35 L162.71 851 L0 851 L0 879.35 Z" class="st2" />
+				</g>
+				<path d="M0 879.35 L162.71 879.35 L162.71 851 L0 851 L0 879.35 Z" class="st4" />
+				<text x="53.31" y="868.77" class="st10">Hatch Clerk</text>			</g>
+		</g>
+		<g id="shape103" transform="translate(434.866,-23.7228)" class="swimlane-(vertical)">
+			
+			
+			
+			<g id="shape104-57">
+				
+				
+				<g id="shadow104-58" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<rect x="0" y="71.4714" width="169.517" height="807.874" class="st2" />
+				</g>
+				<rect x="0" y="71.4714" width="169.517" height="807.874" class="st3" />
+			</g>
+			<g id="shape105-62" transform="translate(0,-779.528)">
+				
+				<desc>Billing Clerk</desc>
+				
+				
+				
+				<g id="shadow105-63" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<path d="M0 879.35 L169.52 879.35 L169.52 851 L0 851 L0 879.35 Z" class="st2" />
+				</g>
+				<path d="M0 879.35 L169.52 879.35 L169.52 851 L0 851 L0 879.35 Z" class="st4" />
+				<text x="56.27" y="868.77" class="st10">Billing Clerk</text>			</g>
+		</g>
+		<g id="shape115" transform="translate(1176.21,-23.7228)" class="swimlane-(vertical)">
+			
+			
+			
+			<g id="shape116-69">
+				
+				
+				<g id="shadow116-70" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<rect x="0" y="71.4714" width="160.076" height="807.874" class="st2" />
+				</g>
+				<rect x="0" y="71.4714" width="160.076" height="807.874" class="st3" />
+			</g>
+			<g id="shape117-74" transform="translate(0,-779.528)">
+				
+				<desc>Gate Checker</desc>
+				
+				
+				
+				<g id="shadow117-75" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<path d="M0 879.35 L160.08 879.35 L160.08 851 L0 851 L0 879.35 Z" class="st2" />
+				</g>
+				<path d="M0 879.35 L160.08 879.35 L160.08 851 L0 851 L0 879.35 Z" class="st4" />
+				<text x="47.35" y="868.77" class="st10">Gate Checker</text>			</g>
+		</g>
+		<g id="shape128" transform="translate(921.089,-23.7228)" class="swimlane-(vertical)">
+			
+			
+			
+			<g id="shape129-81">
+				
+				
+				<g id="shadow129-82" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<rect x="0" y="71.4714" width="255.118" height="807.874" class="st2" />
+				</g>
+				<rect x="0" y="71.4714" width="255.118" height="807.874" class="st3" />
+			</g>
+			<g id="shape130-86" transform="translate(0,-779.528)">
+				
+				<desc>Yard Checker</desc>
+				
+				
+				
+				<g id="shadow130-87" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<path d="M0 879.35 L255.12 879.35 L255.12 851 L0 851 L0 879.35 Z" class="st2" />
+				</g>
+				<path d="M0 879.35 L255.12 879.35 L255.12 851 L0 851 L0 879.35 Z" class="st4" />
+				<text x="95.48" y="868.77" class="st10">Yard Checker</text>			</g>
+		</g>
+		<g id="shape141" transform="translate(767.095,-23.7228)" class="swimlane-(vertical)">
+			
+			
+			
+			<g id="shape142-93">
+				
+				
+				<g id="shadow142-94" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<rect x="0" y="71.4714" width="153.994" height="807.874" class="st2" />
+				</g>
+				<rect x="0" y="71.4714" width="153.994" height="807.874" class="st3" />
+			</g>
+			<g id="shape143-98" transform="translate(0,-779.528)">
+				
+				<desc>Quay Checker</desc>
+				
+				
+				
+				<g id="shadow143-99" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+					<path d="M0 879.35 L153.99 879.35 L153.99 851 L0 851 L0 879.35 Z" class="st2" />
+				</g>
+				<path d="M0 879.35 L153.99 879.35 L153.99 851 L0 851 L0 879.35 Z" class="st4" />
+				<text x="43.18" y="868.77" class="st10">Quay Checker</text>			</g>
+		</g>
+		<g id="shape8" transform="translate(21.9998,-23.7228)" class="phase-list">
+			
+			
+			<g id="shadow8-105" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="99.8179" width="1314.28" height="779.528" class="st11" />
+			</g>
+			<rect x="0" y="99.8179" width="1314.28" height="779.528" class="st12" />
+		</g>
+		<g id="shape9" transform="translate(21.9998,-23.7228)" class="separator-(vertical)">
+			
+			
+			<g id="shape10-110" transform="translate(879.345,99.8179) rotate(90)">
+				
+				
+				<g id="shadow10-111" transform="matrix(1,0,0,1,1.97279,-0.345598)" class="st1" />
+			</g>
+			<g id="shape11-115" transform="translate(-879.345,879.345) rotate(-90)">
+				
+				<desc>Phase</desc>
+				
+				
+				
+				<g id="shadow11-116" transform="matrix(1,0,0,1,-1.97279,0.345598)" class="st1">
+					<path d="M0 879.35 L807.87 879.35 L0 879.35 Z" class="st2" />
+				</g>
+				<path d="M0 879.35 L807.87 879.35 L0 879.35 Z" class="st4" />
+			</g>
+		</g>
+		<g id="shape44" transform="translate(83.866,-753.644)" class="start/end">
+			
+			<desc>Start</desc>
+			
+			
+			
+			
+			<g id="shadow44-121" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M14.17 879.35 L56.69 879.35 A14.1732 14.1732 -180 0 0 56.69 851 L14.17 851 A14.1732 14.1732 -180 1 0 14.17         879.35 Z" class="st2" />
+			</g>
+			<path d="M14.17 879.35 L56.69 879.35 A14.1732 14.1732 -180 0 0 56.69 851 L14.17 851 A14.1732 14.1732 -180 1 0 14.17 879.35        Z" class="st13" />
+			<text x="27.61" y="867.57" class="st14">Start</text>		</g>
+		<g id="shape153" transform="translate(237.858,-548.132)" class="decision">
+			
+			<desc>Cargo Management</desc>
+			
+			
+			
+			
+			<g id="shadow153-127" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M0 858.09 L35.43 836.83 L70.87 858.09 L35.43 879.35 L0 858.09 Z" class="st2" />
+			</g>
+			<path d="M0 858.09 L35.43 836.83 L70.87 858.09 L35.43 879.35 L0 858.09 Z" class="st13" />
+			<text x="26" y="855.69" class="st14">Cargo <tspan x="13.58" dy="1.2em" class="st15">M</tspan>anagement</text>		</g>
+		<g id="shape157" transform="translate(942.349,-548.274)" class="decision">
+			
+			<desc>Yard Operation</desc>
+			
+			
+			
+			
+			<g id="shadow157-134" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M0 858.09 L35.43 836.83 L70.87 858.09 L35.43 879.35 L0 858.09 Z" class="st2" />
+			</g>
+			<path d="M0 858.09 L35.43 836.83 L70.87 858.09 L35.43 879.35 L0 858.09 Z" class="st13" />
+			<text x="10.65" y="860.49" class="st14">Yard <tspan class="st15">O</tspan>peration</text>		</g>
+		<g id="shape180" transform="translate(342.74,-300.101)" class="decision">
+			
+			<desc>Shipping Status</desc>
+			
+			
+			
+			
+			<g id="shadow180-141" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M0 858.09 L35.43 836.83 L70.87 858.09 L35.43 879.35 L0 858.09 Z" class="st2" />
+			</g>
+			<path d="M0 858.09 L35.43 836.83 L70.87 858.09 L35.43 879.35 L0 858.09 Z" class="st13" />
+			<text x="10.47" y="860.49" class="st14">Shipping <tspan class="st15">S</tspan>tatus</text>		</g>
+		<g id="shape181" transform="translate(237.858,-193.802)" class="decision">
+			
+			<desc>Invoice Type</desc>
+			
+			
+			
+			
+			<g id="shadow181-148" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M0 858.09 L35.43 836.83 L70.87 858.09 L35.43 879.35 L0 858.09 Z" class="st2" />
+			</g>
+			<path d="M0 858.09 L35.43 836.83 L70.87 858.09 L35.43 879.35 L0 858.09 Z" class="st13" />
+			<text x="15.05" y="860.49" class="st14">Invoice <tspan class="st15">T</tspan>ype</text>		</g>
+		<g id="shape198" transform="translate(484.191,-44.9826)" class="subprocess">
+			
+			<desc>Settle seaside billing</desc>
+			
+			
+			
+			
+			<path d="M0 879.35 L70.87 879.35 L70.87 851 L0 851 L0 879.35 Z" class="st16" />
+			<path d="M0 879.35 L70.87 879.35 L70.87 851 L0 851 L0 879.35" class="st17" />
+			<path d="M8.5 879.35 L8.5 851" class="st17" />
+			<path d="M62.36 879.35 L62.36 851" class="st17" />
+			<text x="13.07" y="862.77" class="st18">Settle seaside <tspan x="25.68" dy="1.2em" class="st15">billing</tspan></text>		</g>
+		<g id="shape269" transform="translate(1220.81,-44.9826)" class="start/end">
+			
+			<desc>End</desc>
+			
+			
+			
+			
+			<g id="shadow269-164" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<path d="M14.17 879.35 L56.69 879.35 A14.1732 14.1732 -180 0 0 56.69 851 L14.17 851 A14.1732 14.1732 -180 1 0 14.17         879.35 Z" class="st2" />
+			</g>
+			<path d="M14.17 879.35 L56.69 879.35 A14.1732 14.1732 -180 0 0 56.69 851 L14.17 851 A14.1732 14.1732 -180 1 0 14.17 879.35        Z" class="st13" />
+			<text x="29.28" y="867.57" class="st14">End</text>		</g>
+		<g id="shape270" transform="translate(112.212,-704.038)" class="dynamic-connector">
+			
+			<path d="M7.09 879.35 L7.09 893.57" class="st19" />
+		</g>
+		<g id="shape272" transform="translate(154.732,-661.518)" class="dynamic-connector">
+			
+			<path d="M0 872.26 L76.09 872.26" class="st19" />
+		</g>
+		<g id="shape273" transform="translate(273.291,-654.431)" class="dynamic-connector">
+			
+			<path d="M0 879.35 L0 914.78 L-111.52 914.78" class="st19" />
+		</g>
+		<g id="shape274" transform="translate(112.212,-604.825)" class="dynamic-connector">
+			
+			<path d="M7.09 879.35 L7.09 893.57" class="st19" />
+		</g>
+		<g id="shape275" transform="translate(112.212,-555.219)" class="dynamic-connector">
+			
+			<path d="M7.09 879.35 L7.09 893.57" class="st19" />
+		</g>
+		<g id="shape276" transform="translate(112.212,-505.613)" class="dynamic-connector">
+			
+			<path d="M7.09 879.35 L7.09 893.57" class="st19" />
+		</g>
+		<g id="shape277" transform="translate(119.299,-456.006)" class="dynamic-connector">
+			
+			<path d="M0 879.35 L0 914.78 L523.97 914.78" class="st19" />
+		</g>
+		<g id="shape281" transform="translate(685.739,-434.746)" class="dynamic-connector">
+			
+			<path d="M0 879.35 L0 868.72 L-412.45 868.72 L-412.45 773" class="st19" />
+		</g>
+		<g id="shape282" transform="translate(308.724,-562.305)" class="dynamic-connector">
+			
+			<path d="M0 872.26 L26.98 872.26" class="st19" />
+		</g>
+		<g id="shape283" transform="translate(308.724,-569.392)" class="dynamic-connector">
+			
+			<path d="M0 879.35 L10.63 879.35 L10.63 829.74 L26.98 829.74" class="st19" />
+		</g>
+		<g id="shape284" transform="translate(308.724,-569.392)" class="dynamic-connector">
+			
+			<path d="M0 879.35 L10.63 879.35 L10.63 928.95 L26.98 928.95" class="st19" />
+		</g>
+		<g id="shape292" transform="translate(413.606,-618.998)" class="dynamic-connector">
+			
+			<path d="M0 879.35 L10.63 879.35 L10.63 928.81 L521.7 928.81" class="st19" />
+		</g>
+		<g id="shape294" transform="translate(413.606,-562.376)" class="dynamic-connector">
+			
+			<path d="M0 872.33 L10.63 872.33 L10.63 872.19 L521.7 872.19" class="st19" />
+		</g>
+		<g id="shape296" transform="translate(413.606,-519.786)" class="dynamic-connector">
+			
+			<path d="M0 879.35 L10.63 879.35 L10.63 829.6 L521.7 829.6" class="st19" />
+		</g>
+		<g id="shape297" transform="translate(1013.22,-569.534)" class="dynamic-connector">
+			
+			<desc>Inventory Update</desc>
+			
+			
+			
+			
+			<path d="M0 879.35 L10.63 879.35 L10.63 786.94 L63.83 786.94" class="st19" />
+			<rect x="-17.9519" y="803.539" width="57.1638" height="9.59985" class="st21" />
+			<text x="-17.95" y="810.74" class="st22">Inventory Update</text>		</g>
+		<g id="shape298" transform="translate(1013.22,-569.534)" class="dynamic-connector">
+			
+			<desc>Location Update</desc>
+			
+			
+			
+			
+			<path d="M0 879.35 L10.63 879.35 L10.63 833.14 L63.83 833.14" class="st19" />
+			<rect x="-14.4555" y="828.342" width="53.5735" height="9.59985" class="st21" />
+			<text x="-14.46" y="835.54" class="st22">Location Update</text>		</g>
+		<g id="shape299" transform="translate(1013.22,-569.534)" class="dynamic-connector">
+			
+			<desc>Additional Service</desc>
+			
+			
+			
+			
+			<path d="M0 879.35 L10.63 879.35 L10.63 925.55 L63.83 925.55" class="st19" />
+			<rect x="-16.9398" y="920.75" width="58.542" height="9.59985" class="st21" />
+			<text x="-16.94" y="927.95" class="st22">Additional Service</text>		</g>
+		<g id="shape300" transform="translate(1013.22,-569.534)" class="dynamic-connector">
+			
+			<desc>Inspection</desc>
+			
+			
+			
+			
+			<path d="M0 879.35 L10.63 879.35 L10.63 971.75 L63.83 971.75" class="st19" />
+			<rect x="-6.29551" y="945.553" width="33.8511" height="9.59985" class="st21" />
+			<text x="-6.3" y="952.75" class="st22">Inspection</text>		</g>
+		<g id="shape301" transform="translate(1013.22,-562.447)" class="dynamic-connector">
+			
+			<desc>Admeasure</desc>
+			
+			
+			
+			
+			<path d="M0 872.26 L63.83 872.26" class="st19" />
+			<rect x="16.865" y="867.459" width="37.1363" height="9.59985" class="st21" />
+			<text x="16.87" y="874.66" class="st22">Admeasure</text>		</g>
+		<g id="shape303" transform="translate(1154.95,-661.942)" class="dynamic-connector">
+			
+			<path d="M0 879.35 L10.63 879.35 L10.63 1219.93 L-734.3 1219.93" class="st19" />
+		</g>
+		<g id="shape305" transform="translate(1154.95,-615.738)" class="dynamic-connector">
+			
+			<path d="M0 879.35 L10.63 879.35 L10.63 1173.72 L-734.3 1173.72" class="st19" />
+		</g>
+		<g id="shape307" transform="translate(1154.95,-569.534)" class="dynamic-connector">
+			
+			<path d="M0 879.35 L10.63 879.35 L10.63 1127.52 L-734.3 1127.52" class="st19" />
+		</g>
+		<g id="shape309" transform="translate(1154.95,-523.33)" class="dynamic-connector">
+			
+			<path d="M0 879.35 L10.63 879.35 L10.63 1081.31 L-734.3 1081.31" class="st19" />
+		</g>
+		<g id="shape311" transform="translate(1154.95,-477.126)" class="dynamic-connector">
+			
+			<path d="M0 879.35 L10.63 879.35 L10.63 1035.11 L-734.3 1035.11" class="st19" />
+		</g>
+		<g id="shape314" transform="translate(844.092,-406.4)" class="dynamic-connector">
+			
+			<path d="M0 879.35 L0 914.78 L-528.33 914.78" class="st19" />
+		</g>
+		<g id="shape315" transform="translate(237.858,-363.88)" class="dynamic-connector">
+			
+			<path d="M0 872.26 L-69.96 872.26" class="st19" />
+		</g>
+		<g id="shape316" transform="translate(342.74,-314.274)" class="dynamic-connector">
+			
+			<desc>Import</desc>
+			
+			
+			
+			
+			<path d="M0 872.26 L-26.98 872.26" class="st19" />
+			<rect x="-28.1562" y="867.459" width="22.2968" height="9.59985" class="st21" />
+			<text x="-28.16" y="874.66" class="st22">Import</text>		</g>
+		<g id="shape318" transform="translate(266.205,-307.187)" class="dynamic-connector">
+			
+			<path d="M7.09 879.35 L7.09 893.57" class="st19" />
+		</g>
+		<g id="shape319" transform="translate(378.173,-300.101)" class="dynamic-connector">
+			
+			<desc>Inbound</desc>
+			
+			
+			
+			
+			<path d="M0 879.35 L0 907.69 L-62.41 907.69" class="st19" />
+			<rect x="-34.1761" y="902.892" width="27.2499" height="9.59985" class="st21" />
+			<text x="-34.18" y="910.09" class="st22">Inbound</text>		</g>
+		<g id="shape320" transform="translate(266.205,-257.581)" class="dynamic-connector">
+			
+			<path d="M7.09 879.35 L7.09 893.57" class="st19" />
+		</g>
+		<g id="shape321" transform="translate(266.205,-193.802)" class="dynamic-connector">
+			
+			<desc>Postpaid</desc>
+			
+			
+			
+			
+			<path d="M7.09 879.35 L7.09 893.57" class="st19" />
+			<rect x="-7.03048" y="885.176" width="28.234" height="9.59985" class="st21" />
+			<text x="-7.03" y="892.38" class="st22">Postpaid</text>		</g>
+		<g id="shape322" transform="translate(308.724,-151.282)" class="dynamic-connector">
+			
+			<path d="M0 872.26 L26.98 872.26" class="st19" />
+		</g>
+		<g id="shape323" transform="translate(112.212,-356.794)" class="dynamic-connector">
+			
+			<path d="M7.09 879.35 L7.09 893.57" class="st19" />
+		</g>
+		<g id="shape324" transform="translate(112.212,-307.187)" class="dynamic-connector">
+			
+			<path d="M7.09 879.35 L7.09 893.57" class="st19" />
+		</g>
+		<g id="shape326" transform="translate(119.299,-257.581)" class="dynamic-connector">
+			
+			<path d="M0 879.35 L0 1077.77 L357.85 1077.77" class="st19" />
+		</g>
+		<g id="shape328" transform="translate(519.625,-122.935)" class="dynamic-connector">
+			
+			<path d="M0 879.35 L0 843.91 L-98.98 843.91" class="st19" />
+		</g>
+		<g id="shape330" transform="translate(237.858,-215.061)" class="dynamic-connector">
+			
+			<desc>Prepaid</desc>
+			
+			
+			
+			
+			<path d="M0 879.35 L-10.63 879.35 L-10.63 985.64 L239.29 985.64" class="st19" />
+			<rect x="46.899" y="980.845" width="24.9763" height="9.59985" class="st21" />
+			<text x="46.9" y="988.04" class="st22">Prepaid</text>		</g>
+		<g id="shape331" transform="translate(378.173,-172.542)" class="dynamic-connector">
+			
+			<path d="M0 879.35 L0 812.02 L878.07 812.02 L878.07 815.61" class="st19" />
+		</g>
+		<g id="shape333" transform="translate(1220.81,-207.975)" class="dynamic-connector">
+			
+			<path d="M0 872.26 L-58.82 872.26" class="st19" />
+		</g>
+		<g id="shape334" transform="translate(1112.43,-200.888)" class="dynamic-connector">
+			
+			<path d="M7.09 879.35 L7.09 900.28" class="st19" />
+		</g>
+		<g id="shape336" transform="translate(1154.95,-158.74)" class="dynamic-connector">
+			
+			<path d="M0 879.35 L101.3 879.35 L101.3 908.11" class="st19" />
+		</g>
+		<g id="shape338" transform="translate(1249.16,-94.5889)" class="dynamic-connector">
+			
+			<path d="M7.09 879.35 L7.09 893.57" class="st19" />
+		</g>
+		<g id="shape341" transform="translate(1220.81,-101.676)" class="dynamic-connector">
+			
+			<desc>Postpaid SSR</desc>
+			
+			
+			
+			
+			<path d="M0 872.26 L-658.71 872.26" class="st23" />
+			<rect x="-353.746" y="867.459" width="41.7379" height="9.59985" class="st21" />
+			<text x="-353.75" y="874.66" class="st22">Postpaid SSR</text>		</g>
+		<g id="shape343" transform="translate(112.212,-753.644)" class="dynamic-connector">
+			
+			<path d="M7.09 879.35 L7.09 893.57" class="st19" />
+		</g>
+		<g id="shape344" transform="translate(555.058,-52.0693)" class="dynamic-connector">
+			
+			<path d="M0 872.26 L658.71 872.26" class="st19" />
+		</g>
+		<g id="shape346" transform="translate(83.866,-654.431)" class="process">
+			
+			<desc>Create vessel visit</desc>
+			
+			
+			
+			
+			<g id="shadow346-416" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st25" />
+			<text x="6.48" y="867.57" class="st14">Create vessel<tspan class="st15">&#xa0;</tspan><tspan class="st15">visit</tspan></text>		</g>
+		<g id="shape347" transform="translate(83.866,-704.038)" class="process">
+			
+			<desc>Create vessel</desc>
+			
+			
+			
+			
+			<g id="shadow347-424" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st25" />
+			<text x="13.93" y="867.57" class="st14">Create vessel</text>		</g>
+		<g id="shape348" transform="translate(237.858,-654.431)" class="process">
+			
+			<desc>Submit manifest</desc>
+			
+			
+			
+			
+			<g id="shadow348-430" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st25" />
+			<text x="8.79" y="867.57" class="st14">Submit manifest</text>		</g>
+		<g id="shape755" transform="translate(83.866,-604.825)" class="process">
+			
+			<desc>Import discharge order from manfiest</desc>
+			
+			
+			
+			
+			<g id="shadow755-436" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st25" />
+			<text x="7.82" y="862.77" class="st14">Import discharge <tspan x="2.47" dy="1.2em" class="st15">order from manfiest</tspan></text>		</g>
+		<g id="shape756" transform="translate(83.866,-555.219)" class="process">
+			
+			<desc>Assign vessel location of discharge order</desc>
+			
+			
+			
+			
+			<g id="shadow756-443" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st25" />
+			<text x="14.35" y="857.97" class="st14">Assign vessel <tspan x="18.1" dy="1.2em" class="st15">location of </tspan><tspan x="9.98" dy="1.2em" class="st15">discharge order</tspan></text>		</g>
+		<g id="shape757" transform="translate(83.866,-505.613)" class="process">
+			
+			<desc>Assign yard location of discharge order</desc>
+			
+			
+			
+			
+			<g id="shadow757-451" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st25" />
+			<text x="2.95" y="862.77" class="st14">Assign yard location <tspan x="5.74" dy="1.2em" class="st15">of discharge order</tspan></text>		</g>
+		<g id="shape758" transform="translate(83.866,-456.006)" class="process">
+			
+			<desc>Update vessel visit state to OK to Discharge</desc>
+			
+			
+			
+			
+			<g id="shadow758-458" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st25" />
+			<text x="5.23" y="857.97" class="st14">Update vessel visit <tspan x="12.95" dy="1.2em" class="st15">state to OK to </tspan><tspan x="19.51" dy="1.2em" class="st15">Discharge</tspan></text>		</g>
+		<g id="shape760" transform="translate(650.306,-406.4)" class="process">
+			
+			<desc>Record vessel discharge - RORO [Mobile]</desc>
+			
+			
+			
+			
+			<g id="shadow760-466" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st26" />
+			<text x="13.24" y="857.97" class="st14">Record vessel <tspan x="7.2" dy="1.2em" class="st15">discharge </tspan>- RORO <tspan x="21.52" dy="1.2em" class="st15">[</tspan>Mobile]</text>		</g>
+		<g id="shape761" transform="translate(721.172,-413.487)" class="dynamic-connector">
+			
+			<path d="M0 872.26 L80.45 872.26" class="st19" />
+		</g>
+		<g id="shape762" transform="translate(808.659,-406.4)" class="process">
+			
+			<desc>Record vessel/crane activities [Mobile]</desc>
+			
+			
+			
+			
+			<g id="shadow762-479" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st26" />
+			<text x="2.6" y="862.77" class="st14">Record vessel/crane <tspan x="6.22" dy="1.2em" class="st15">activities </tspan>[Mobile]</text>		</g>
+		<g id="shape763" transform="translate(237.858,-356.794)" class="process">
+			
+			<desc>Record vessel billable services</desc>
+			
+			
+			
+			
+			<g id="shadow763-486" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st25" />
+			<text x="13.24" y="862.77" class="st14">Record vessel <tspan x="9.83" dy="1.2em" class="st15">billable services</tspan></text>		</g>
+		<g id="shape764" transform="translate(77.7361,-356.794)" class="process">
+			
+			<desc>Update vessel visit state to Operation Completed or Departed</desc>
+			
+			
+			
+			
+			<g id="shadow764-493" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="83.126" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="83.126" height="28.3465" class="st25" />
+			<text x="2.3" y="857.97" class="st14">Update vessel visit state <tspan x="20.69" dy="1.2em" class="st15">to Operation </tspan><tspan x="3.08" dy="1.2em" class="st15">Completed or Departed</tspan></text>		</g>
+		<g id="shape765" transform="translate(83.866,-307.187)" class="process">
+			
+			<desc>Confirm operation in vessel visit</desc>
+			
+			
+			
+			
+			<g id="shadow765-501" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st25" />
+			<text x="5.48" y="862.77" class="st14">Confirm operation <tspan x="14.22" dy="1.2em" class="st15">in vessel visit</tspan></text>		</g>
+		<g id="shape766" transform="translate(83.866,-257.581)" class="process">
+			
+			<desc>Generate TDR</desc>
+			
+			
+			
+			
+			<g id="shadow766-508" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st25" />
+			<text x="12.7" y="867.57" class="st14">Generate TDR</text>		</g>
+		<g id="shape767" transform="translate(342.74,-604.825)" class="process">
+			
+			<desc>View cargo inventory</desc>
+			
+			
+			
+			
+			<g id="shadow767-514" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st25" />
+			<text x="17.5" y="862.77" class="st14">View cargo <tspan x="19.86" dy="1.2em" class="st15">inventory</tspan></text>		</g>
+		<g id="shape768" transform="translate(342.74,-555.219)" class="process">
+			
+			<desc>View cargo lot</desc>
+			
+			
+			
+			
+			<g id="shadow768-521" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st25" />
+			<text x="12.23" y="867.57" class="st14">View cargo lot</text>		</g>
+		<g id="shape771" transform="translate(342.74,-505.613)" class="process">
+			
+			<desc>View cargo tracking</desc>
+			
+			
+			
+			
+			<g id="shadow771-527" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st25" />
+			<text x="3.53" y="867.57" class="st14">View cargo tracking</text>		</g>
+		<g id="shape773" transform="translate(1084.08,-647.768)" class="process">
+			
+			<desc>Update inventory - RORO [Mobile]</desc>
+			
+			
+			
+			
+			<g id="shadow773-533" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st26" />
+			<text x="4.81" y="862.77" class="st14">Update inventory - <tspan x="10.98" dy="1.2em" class="st15">RORO </tspan>[Mobile]</text>		</g>
+		<g id="shape776" transform="translate(1084.08,-601.564)" class="process">
+			
+			<desc>Update location - RORO [Mobile]</desc>
+			
+			
+			
+			
+			<g id="shadow776-540" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st26" />
+			<text x="7.28" y="862.77" class="st14">Update location - <tspan x="10.98" dy="1.2em" class="st15">RORO </tspan>[Mobile]</text>		</g>
+		<g id="shape778" transform="translate(1084.08,-555.361)" class="process">
+			
+			<desc>Admeasure - RORO [Mobile]</desc>
+			
+			
+			
+			
+			<g id="shadow778-547" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st26" />
+			<text x="4.19" y="862.77" class="st14">Admeasure - RORO <tspan x="21.52" dy="1.2em" class="st15">[</tspan>Mobile]</text>		</g>
+		<g id="shape779" transform="translate(1084.08,-509.157)" class="process">
+			
+			<desc>Record cargo additional services - RORO</desc>
+			
+			
+			
+			
+			<g id="shadow779-554" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st26" />
+			<text x="14.08" y="857.97" class="st14">Record cargo <tspan x="3.14" dy="1.2em" class="st15">additional services </tspan>- <tspan x="25.79" dy="1.2em" class="st15">RORO</tspan></text>		</g>
+		<g id="shape780" transform="translate(1084.08,-462.953)" class="process">
+			
+			<desc>Inspect - RORO [Mobile]</desc>
+			
+			
+			
+			
+			<g id="shadow780-562" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st26" />
+			<text x="10.96" y="862.77" class="st14">Inspect - RORO <tspan x="21.52" dy="1.2em" class="st15">[</tspan>Mobile]</text>		</g>
+		<g id="shape782" transform="translate(237.858,-307.187)" class="process">
+			
+			<desc>Release B/L</desc>
+			
+			
+			
+			
+			<g id="shadow782-569" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st25" />
+			<text x="16.59" y="867.57" class="st14">Release B/L</text>		</g>
+		<g id="shape783" transform="translate(237.858,-257.581)" class="process">
+			
+			<desc>Create cargo delivery request</desc>
+			
+			
+			
+			
+			<g id="shadow783-575" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st25" />
+			<text x="14.77" y="862.77" class="st14">Create cargo <tspan x="9.12" dy="1.2em" class="st15">delivery request</tspan></text>		</g>
+		<g id="shape784" transform="translate(237.858,-144.195)" class="process">
+			
+			<desc>Dispatch service request</desc>
+			
+			
+			
+			
+			<g id="shadow784-582" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st25" />
+			<text x="9.08" y="862.77" class="st14">Dispatch service <tspan x="22.95" dy="1.2em" class="st15">request</tspan></text>		</g>
+		<g id="shape791" transform="translate(342.74,-144.195)" class="process">
+			
+			<desc>Create truck visit</desc>
+			
+			
+			
+			
+			<g id="shadow791-589" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st25" />
+			<text x="7.97" y="867.57" class="st14">Create truck visit</text>		</g>
+		<g id="shape792" transform="translate(484.191,-94.5889)" class="subprocess">
+			
+			<desc>Settle landside billing</desc>
+			
+			
+			
+			
+			<path d="M0 879.35 L70.87 879.35 L70.87 851 L0 851 L0 879.35 Z" class="st16" />
+			<path d="M0 879.35 L70.87 879.35 L70.87 851 L0 851 L0 879.35" class="st17" />
+			<path d="M8.5 879.35 L8.5 851" class="st17" />
+			<path d="M62.36 879.35 L62.36 851" class="st17" />
+			<text x="11.5" y="862.77" class="st18">Settle <tspan class="st15">landside</tspan> <tspan x="25.68" dy="1.2em" class="st15">billing</tspan></text>		</g>
+		<g id="shape793" transform="translate(1220.81,-200.888)" class="process">
+			
+			<desc>Confirm truck arrival [Mobile]</desc>
+			
+			
+			
+			
+			<g id="shadow793-604" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st26" />
+			<text x="13.11" y="862.77" class="st14">Confirm truck <tspan x="10.35" dy="1.2em" class="st15">arrival </tspan>[Mobile]</text>		</g>
+		<g id="shape795" transform="translate(1084.08,-200.888)" class="process">
+			
+			<desc>Record truck loading - RORO [Mobile]</desc>
+			
+			
+			
+			
+			<g id="shadow795-611" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st26" />
+			<text x="14.72" y="857.97" class="st14">Record truck <tspan x="10.81" dy="1.2em" class="st15">loading </tspan>- RORO <tspan x="21.52" dy="1.2em" class="st15">[</tspan>Mobile]</text>		</g>
+		<g id="shape796" transform="translate(1084.08,-144.567)" class="process">
+			
+			<desc>Complete mission [Mobile]</desc>
+			
+			
+			
+			
+			<g id="shadow796-619" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st26" />
+			<text x="6.38" y="862.77" class="st14">Complete mission <tspan x="21.52" dy="1.2em" class="st15">[</tspan>Mobile]</text>		</g>
+		<g id="shape797" transform="translate(1220.81,-94.5889)" class="process">
+			
+			<desc>Confirm truck arrival [Mobile]</desc>
+			
+			
+			
+			
+			<g id="shadow797-626" transform="matrix(1,0,0,1,0.345598,1.97279)" class="st1">
+				<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st24" />
+			</g>
+			<rect x="0" y="850.999" width="70.8661" height="28.3465" class="st26" />
+			<text x="13.11" y="862.77" class="st14">Confirm truck <tspan x="10.35" dy="1.2em" class="st15">arrival </tspan>[Mobile]</text>		</g>
+	</g>
+</svg>
+  </div>
+  
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <filter id="hover">
+        <feMorphology operator="dilate" radius="4"></feMorphology>
+	      
+        <feColorMatrix type="matrix" values="
+                       1.00 1.00 1.00 1.00 1.00
+                       1.00 1.00 1.00 1.00 1.00
+                       0.00 0.00 0.00 0.00 0.00
+                       0 0 0 0.30 0" result="matrix" />
+        <feBlend in="SourceGraphic" in2="matrix" mode="normal" />
+      </filter>
+
+      <filter id="select">
+        <feMorphology operator="dilate" radius="4"></feMorphology>
+	      
+        <feColorMatrix type="matrix" values="
+                       1.00 1.00 1.00 1.00 1.00
+                       1.00 1.00 1.00 1.00 1.00
+                       0.00 0.00 0.00 0.00 0.00
+                       0 0 0 0.90 0" result="matrix" />
+        <feBlend in="SourceGraphic" in2="matrix" mode="normal" />
+      </filter>
+      <filter id="hyperlink">
+        <feMorphology operator="dilate" radius="4"></feMorphology>
+	      
+        <feColorMatrix type="matrix" values="
+                       0.00 0.00 0.00 0.00 0.00
+                       0.00 0.00 0.00 0.00 0.00
+                       1.00 1.00 1.00 1.00 1.00
+                       0 0 0 0.30 0" result="matrix" />
+        <feBlend in="SourceGraphic" in2="matrix" mode="normal" />
+      </filter>
+    </defs>
+  </svg>
+</body>
+
+<div class="tables">
+	<h1 style="color:#0080AF">Vehicle Delivery</h1>
+	<p>This Standard Operating Procedure (SOP) describes the end-to-end process of import/inbound vehicle (RORO) cargoes discharged from the vessel, stored at yard, and delivered by truck.</p>
+	<p style="text-indent: 20px;"><i><strong>Scenario Number: </strong>IMS521121411, IBS621121411</i></p>
+
+	
+	<h2 style="font-weight:normal;color:inherit">Steps</h2>
+	<table id="steps">
+	  <tr>
+		<th style="text-align:center">#</th>
+		<th>Action</th>
+		<th>Description</th>
+		<th>Module</th>
+		<th>User Manual</th>
+		<th>Variation</th>
+		<th>Optional</th>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">1</td>
+		<td>Create vessel</td>
+		<td>A vessel serves as the profile of the physical vessel that contains information about its dimensions, storage locations, and maritime identifications.</td>
+		<td>Visit Schedule > Vessel</td>
+		<td><a href="">Create a vessel</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">2</td>
+		<td>Create vessel visit</td>
+		<td>A vessel visit specifies the actual designated route of a vessel and its actual visit schedule to the terminal.</td>
+		<td>Visit Schedule > Vessel Visit</td>
+		<td><a href="">Create a vessel visit</a></td>
+		<td> </td>
+		<td>
+			Create vessel service<br>
+			Update visit operation mode
+		</td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">3</td>
+		<td>Submit manifest</td>
+		<td>
+		Submit a manifest to declare the list of onboard cargoes from an arriving vessel to its corresponding vessel visit. <br>
+		<i>Manifest Template: Import - All Types (XLSX) or General Cargo - Import (XLSX)</i>
+		</td>
+		<td>Manifest and Documents > Manifest</td>
+		<td><a href="">Submit a manifest</a></td>
+		<td>Submit manifest (vessel visit)</td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">4</td>
+		<td>Import discharge order from manifest</td>
+		<td>A discharge order is a planned list of cargoes that are to be discharged from a vessel.</td>
+		<td>Visit Schedule > Vessel Visit</td>
+		<td><a href="">Import discharge order</a></td>
+		<td>Create discharge order</td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">5</td>
+		<td>Assign vessel location of discharge order</td>
+		<td>
+		The assigned location appears in Cargo Mobile to assist in tracking the vessel location of cargo during discharging operations.<br>
+		<i>Vessel locations are specified in the vessel profile.</i>
+		</td>
+		<td>Visit Schedule > Vessel Visit</td>
+		<td><a href="">Assign vessel location</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">6</td>
+		<td>Assign yard location of discharge order</td>
+		<td>The assigned yard location appears in the Cargo Mobile app to assist in tracking the yard location of a cargo during discharging operations.</td>
+		<td>Visit Schedule > Vessel Visit</td>
+		<td><a href="">Assign yard location</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">7</td>
+		<td>Update vessel visit state to OK to Discharge</td>
+		<td>Once the vessel arrives to the terminal and is ready for discharging operations, change the visit state to OK to Discharge.</td>
+		<td>Visit Schedule > Vessel Visit</td>
+		<td><a href="">Update the visit state of a vessel visit</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">8</td>
+		<td>Record vessel discharge - RORO [Mobile]</td>
+		<td>Record the discharge operation of a vessel in its corresponding vessel visit.</td>
+		<td>Cargo Mobile > Vessel</td>
+		<td><a href="">Record vessel discharge</a></td>
+		<td>Record offline vessel discharge - RORO [Mobile]</td>
+		<td>Record vessel discharge - RORO (damaged) [Mobile]</td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">9</td>
+		<td>Record vessel/crane activities [Mobile]</td>
+		<td>Capture and manage real-time vessel activities that affect vessel operations and billing services.</td>
+		<td>Cargo Mobile > Vessel</td>
+		<td><a href="">Manage vessel activities</a></td>
+		<td>Record vessel/crane activities</td>
+		<td>Record vessel operation timestamps</td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">10</td>
+		<td>Record vessel billable service</td>
+		<td>Create and manage additional services performed for a vessel visit.</td>
+		<td>Visit Schedule > Vessel Visit</td>
+		<td><a href="">Manage vessel operation data</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">11</td>
+		<td>Update vessel visit state to Operation Completed or Departed</td>
+		<td>Once all the operations for the vessel visit are completed, change the visit state to Operation Completed or once the vessel departs the terminal, change the visit state to Departed.</td>
+		<td>Visit Schedule > Vessel Visit</td>
+		<td><a href="">Update the visit state of a vessel visit</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">12</td>
+		<td>Confirm operation in vessel visit</td>
+		<td>Once the operation data is retrieved for the vessel visit, confirm the operation data to finalize it.</td>
+		<td>Visit Schedule > Vessel Visit</td>
+		<td><a href="">Confirm operation data</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">13</td>
+		<td>Generate TDR</td>
+		<td>A terminal departure report (TDR) is a report containing the summary of operations, productivity, and billable services provided to the vessel.</td>
+		<td>Visit Schedule > Vessel Visit</td>
+		<td><a href="">Generate terminal departure report</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">14</td>
+		<td>Settle seaside billing</td>
+		<td>Generate invoice of seaside billing transactions for payment settlement.</td>
+		<td>Billing > EBS</td>
+		<td><a href="">System Order</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">15</td>
+		<td>View cargo inventory</td>
+		<td>View cargo lots currently in the inventory according to their location in the terminal yard.</td>
+		<td>GC/CFS > Cargo Inventory</td>
+		<td><a href="">Cargo inventory monitoring</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">16</td>
+		<td>View cargo lot</td>
+		<td>View and manage cargo lots, such as applying and removing of holds.</td>
+		<td>GC/CFS > Cargo Lot</td>
+		<td><a href="">Cargo lot management</a></td>
+		<td> </td>
+		<td>
+		Apply cargo lot hold <br>
+		Release cargo lot hold
+		</td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">17</td>
+		<td>View cargo tracking</td>
+		<td>View each cargo lots and their movement in the terminal.</td>
+		<td>GC/CFS > Cargo Tracking</td>
+		<td><a href="">Cargo tracking</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">18</td>
+		<td>Update inventory - RORO [Mobile]</td>
+		<td>Update the cargo details of RORO cargo currently in the inventory.</td>
+		<td>Cargo Mobile > Yard</td>
+		<td><a href="">Update RORO cargoes in the inventory</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">19</td>
+		<td>Update location - RORO [Mobile]</td>
+		<td>Update the storage location of RORO cargo currently in the yard.</td>
+		<td>Cargo Mobile > Yard</td>
+		<td><a href="">Update RORO location</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">20</td>
+		<td>Admeasure - RORO [Mobile]</td>
+		<td>Record the measurement of a RORO cargo in order to document the actual cargo admeasurement volume.</td>
+		<td>Cargo Mobile > Yard</td>
+		<td><a href="">Record RORO cargo admeasurement</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">21</td>
+		<td>Record cargo additional service - RORO [Mobile]</td>
+		<td> </td>
+		<td>Cargo Mobile > Yard</td>
+		<td><a href=""> </a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">22</td>
+		<td>Inspect - RORO [Mobile]</td>
+		<td>Record vehicle inspection in order to document the checking of damages, discrepancy, vehicle details, and the availability of interior and exterior parts, and accessories.</td>
+		<td>Cargo Mobile > Yard</td>
+		<td><a href="">Record a vehicle inspection</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">23</td>
+		<td>Release B/L</td>
+		<td>
+		Update the customs release status of the B/L from Not Released to Full Released.<br>
+		<i>Applies only to B/L records that belong to international vessel visits.</i>
+		</td>
+		<td>Manifest and Documents > B/L</td>
+		<td><a href="">Release a bill of lading</a></td>
+		<td> </td>
+		<td>Assign B/L - RORO</td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">24</td>
+		<td>Create cargo delivery request</td>
+		<td>Create a cargo delivery request to manage international or domestic delivery transactions.</td>
+		<td>GC/CFS > Request</td>
+		<td><a href="">Create a cargo delivery request</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">25</td>
+		<td>Dispatch service request</td>
+		<td>
+		Dispatch a service request when it is ready to start with the required terminal operation.<br>
+		<i>Applies only to service requests with postpaid invoice option.</i>
+		</td>
+		<td>GC/CFS > Request</td>
+		<td><a href="">Dispatch a service request</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">26</td>
+		<td>Settle landside billing</td>
+		<td>Generate invoice of landside billing transactions for payment settlement.</td>
+		<td>Billing > EBS</td>
+		<td><a href="">OnSpot Clearance</a></td>
+		<td>System Order</td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">27</td>
+		<td>Create truck visit</td>
+		<td> 
+		<i>Applies only if terminal supports truck visit mode.</i>	
+		</td>
+		<td>GC/CFS > Truck Visit</td>
+		<td><a href=""> </a></td>
+		<td>Create gate pass</td>
+		<td>Print truck visit slip</td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">28</td>
+		<td>Confirm truck arrival [Mobile]</td>
+		<td>Confirm and record the arrival date and time of incoming truck or driver.</td>
+		<td>Cargo Mobile > Gate</td>
+		<td><a href="">Confirm a truck arrival</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">29</td>
+		<td>Record truck loading - RORO [Mobile]</td>
+		<td>Record the loaded quantity of the cargo from a location in the yard inventory to the truck.</td>
+		<td>Cargo Mobile > Gate</td>
+		<td><a href="">Record a truck loading</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">30</td>
+		<td>Complete mission [Mobile]</td>
+		<td>Complete the mission to finish the loading or unloading operations for a truck mission.</td>
+		<td>Cargo Mobile > Gate</td>
+		<td><a href="">Complete a truck mission</a></td>
+		<td> </td>
+		<td>Print CIR</td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">31</td>
+		<td>Confirm truck departure [Mobile]</td>
+		<td>Confirm and record the departure date and time of outgoing truck or driver.</td>
+		<td>Cargo Mobile > Gate</td>
+		<td><a href="">Confirm a truck departure</a></td>
+		<td> </td>
+		<td> </td>
+	  </tr>
+	</table>
+	
+	<h2 style="font-weight:normal;color:inherit">Variation</h2>
+	<table id="steps">
+	  <tr>
+		<th style="text-align:center">#</th>
+		<th>Action</th>
+		<th>Description</th>
+		<th>Module</th>
+		<th>User Manual</th>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">1</td>
+		<td>Submit manifest (vessel visit)</td>
+		<td>Manifests are submitted to their corresponding vessel visit records in the Vessel Visit module.</td>
+		<td>Visit Schedule > Vessel Visit</td>
+		<td><a href="">Submit a manifest</a></td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">2</td>
+		<td>Create discharge order</td>
+		<td>Manually add the cargoes to the discharge order even when the discharging operation has already started.</td>
+		<td>Visit Schedule > Vessel Visit</td>
+		<td><a href="">Add a cargo to discharge order</a></td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">3</td>
+		<td>Record offline vessel discharge - RORO [Mobile]</td>
+		<td> </td>
+		<td>Cargo Mobile > Vessel</td>
+		<td><a href=""> </a></td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">4</td>
+		<td>Record vessel/crane activities</td>
+		<td>Retrieve or create the vessel and crane activities and events.</td>
+		<td>Visit Schedule > Vessel Visit</td>
+		<td><a href="">Manage vessel operation data</a></td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">5</td>
+		<td>Create gate pass</td>
+		<td>
+		Manage and allow the gate-in and gate-out transactions of cargoes that belong to a service request.<br>
+		<i>Applies only if terminal supports gate pass mode.</i>
+		</td>
+		<td>GC/CFS > Request</td>
+		<td><a href="">Gate pass management</a></td>
+	  </tr>
+	</table>
+	<h2 style="font-weight:normal;color:inherit">Optional</h2>
+	<table style="margin-bottom:20px;"id="steps">
+	  <tr>
+		<th style="text-align:center">#</th>
+		<th>Action</th>
+		<th>Description</th>
+		<th>Module</th>
+		<th>User Manual</th>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">1</td>
+		<td>Create vessel service</td>
+		<td>A vessel service is a record that specifies the regular designated route of a vessel or group of vessels, including their regular visit schedule to the terminal.</td>
+		<td>Container Management System > Container Management Menu</td>
+		<td><a href="">Create a vessel service</a></td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">2</td>
+		<td>Update visit operation mode</td>
+		<td>Update operation modes supported by the vessel.</td>
+		<td>Visit Schedule > Vessel Visit</td>
+		<td><a href="">Update the visit information of a vessel visit</a></td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">3</td>
+		<td>Record vessel discharge - RORO (damaged) [Mobile]</td>
+		<td>Indicate whether the cargo being discharged is damaged.</td>
+		<td>Cargo Mobile > Vessel</td>
+		<td><a href="">Record vessel discharge</a></td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">4</td>
+		<td>Record vessel operation timestamps</td>
+		<td>Update the discharging and loading operation timestamps and other terminal-related operations.</td>
+		<td>Visit Schedule > Vessel Visit</td>
+		<td><a href="">Manage vessel operation data</a></td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">5</td>
+		<td>Apply cargo lot hold</td>
+		<td>Apply prohibited activities to temporarily restrict the movement of the cargo lot.</td>
+		<td>GC/CFS > Cargo Lot</td>
+		<td><a href="">Cargo lot management</a></td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">6</td>
+		<td>Release cargo lot hold</td>
+		<td>Remove a hold from a cargo lot.</td>
+		<td>GC/CFS > Cargo Lot</td>
+		<td><a href="">Cargo lot management</a></td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">7</td>
+		<td>Assign B/L - RORO</td>
+		<td>Assigning B/L to a cargo is required to perform cargo delivery, as all cargoes at the yard should be delivered with a B/L that corresponds to cargoes listed on a contract.</td>
+		<td>GC/CFS > B/L Assignment</td>
+		<td><a href="">Bill of lading assignment</a></td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">8</td>
+		<td>Print truck visit slip</td>
+		<td> 
+			<i>Applies only if terminal supports truck visit mode.</i>	
+		</td>
+		<td>GC/CFS > Truck Visit</td>
+		<td><a href=""> </a></td>
+	  </tr>
+	  <tr>
+		  <td style="text-align:center">9</td>
+		<td>Print CIR</td>
+		<td>Print a cargo interchange receipt (CIR) for a completed truck mission which serves as a proof of the successful exchange of cargo between the terminal and the carrier of the cargo.</td>
+		<td>Cargo Mobile > Gate</td>
+		<td><a href="">Print a CIR</a></td>
+	  </tr>
+	</table>
+	<br>
+</div>
+</html>
